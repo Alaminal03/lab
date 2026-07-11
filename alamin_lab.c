@@ -6,7 +6,7 @@ int main()
 {
     int a[50], n, c, v, p, q;
 
-t:
+ t:
     printf("Enter Array (1-50) = ");
     scanf("%d", &n);
 
@@ -43,10 +43,8 @@ t:
         case 1:
             printf("\nChoice Inserting array = ");
             scanf("%d",&v);
-            int a = ONEDINTArrayInput_LP(a,n,v);
-            printf("Result = %d",a);
-
-
+            n = ONEDINTArrayInput_LP(a,n,v);
+            printf("Result = %d",n);
 
             break;
 
