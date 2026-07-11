@@ -19,7 +19,6 @@ void OneINDarray(int a[], int n)
 int ONEDINTArrayInput_LP(int aa[],int nn,int vv)
 {
 
-    aa[nn+1]=vv;
+    aa[nn]=vv;
     return nn+1;
 }
-
