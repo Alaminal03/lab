@@ -45,7 +45,7 @@ int oneDIntDelSP(int aa[50],int nn,int pp)
 int OneIntArrayLeanerSearch(int aa[50],int nn,int vv)
 {
     int i, c = 0;
-    for (i = 1; i < nn;i++)
+    for (i = 1; i <= nn;i++)
     {
         if(vv==aa[i])
         {
