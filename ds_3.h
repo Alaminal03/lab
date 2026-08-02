@@ -42,10 +42,10 @@ int oneDIntDelSP(int aa[50],int nn,int pp)
     }
     return nn - 1;
 }
-int OneIntArrayLeanerSearch(int aa[50],int nn,int vv)
+void OneIntArrayLeanerSearch(int aa[50],int nn,int vv)
 {
     int i, c = 0;
-    for (i = 1; i <= nn;i++)
+    for (i = 1; i < nn;i++)
     {
         if(vv==aa[i])
         {
@@ -61,4 +61,50 @@ int OneIntArrayLeanerSearch(int aa[50],int nn,int vv)
     {
         printf("\nTotal Found = %d\n", c);
     }
+}
+ void OneDIntArrayBubble_Sort(int aa[50], int nn)
+ {
+     int i, j, temp;
+     for (int i = 1; i <= nn;i++)
+     {
+         for (j = i; j <= nn;j++)
+         {
+            if(aa[j] > aa[j+1])
+            {
+                temp = aa[j];
+                aa[j] = aa[j + 1];
+                aa[j + 1] = temp;
+            }
+
+         }
+     }
+ }
+void OneDIntArrayBinary_Search(int aa[50],int nn,int vv)
+ {
+     int beg, end, mid;
+     OneDIntArrayBubble_Sort(aa, nn);
+     beg = 0;
+     end = nn-1;
+     
+    while(beg<=end)
+    {
+        mid = (beg + end) / 2;
+        if(vv==aa[mid])
+        {
+            printf("\nFound");
+            return;
+        }
+        else if(vv>aa[mid])
+        {
+            beg = mid + 1;
+        }
+        else if(vv<aa[mid])
+        {
+            end = mid - 1;
+        }
+    }
+    printf("\nNot Found");
+            
+                
+            
 }
