@@ -113,9 +113,31 @@ int main()
             break;
 
         case 6:
+            printf("\nChoice Bubble Sort\n");
+            if(n>0)
+            {
+                OneDIntArrayBubble_Sort(a, n);
+                printf("\nSorted Successfully\n");
+            }
+            else
+            {
+                printf("\nArray is Empty\n");
+            }
             break;
 
         case 7:
+            printf("\nChoice binary search\n");
+            if (n>0)
+            {
+                printf("\nEnter value for searching\n");
+                scanf("%d", &v);
+                OneDIntArrayBinary_Search(a, n, v);
+            }
+                else
+                {
+                    printf("\nArray Empty\n");
+                }
+
             break;
 
         default:
