@@ -103,6 +103,33 @@ void OneDIntArrayBinary_Search(int aa[50],int nn,int vv)
             end = mid - 1;
         }
     }
+
+     struct node
+{
+    int value;
+    struct node *add;
+};
+
+void LinkedList_InsertionLast( struct node *l,int vv)
+{
+   struct node *temp;
+   while(l->add!=NULL)
+    l=l->add;
+   temp=(struct node *)malloc(sizeof(struct node));
+   temp->value=vv;
+   temp->add=l->add;
+   l->add=temp;
+}
+
+ void LinkedList_Display(struct node *l)
+
+{
+    while(l->add!=NULL)
+    {
+        printf("\t->%d",l->add->value);
+        l=l->add;
+    }
+}
     printf("\nNot Found");
             
                 
