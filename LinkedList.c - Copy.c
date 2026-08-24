@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"DS.h"
+#include"ds_3.h"
 
 int main()
 {
